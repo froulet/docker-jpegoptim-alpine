@@ -32,4 +32,6 @@ docker run --rm -it jpegoptim-dockerized jpegoptim
 
 If you have any problems with or questions about this Docker image, please contact me through a Github issue.
 
-Automated Build with docker-hub is coming soon.
+# Automated build
+
+[https://hub.docker.com/r/froulet/docker-jpegoptim-alpine/](https://hub.docker.com/r/froulet/docker-jpegoptim-alpine/)
