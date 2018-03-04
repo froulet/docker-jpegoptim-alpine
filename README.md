@@ -9,7 +9,7 @@ docker build . -t jpegoptim-dockerized
 You have to mount the folder containing the image into /app directory. Example :
 
 ```
-docker run --rm -it -v /:/app -w /app jpegoptim-dockerized images.jpg
+docker run --rm -it -v $(pwd):/app -w /app jpegoptim-dockerized images.jpg
 ```
 
 ## Use jpegoptim with an absolute path
