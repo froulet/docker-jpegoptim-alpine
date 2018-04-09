@@ -1,22 +1,27 @@
 # Usage
 
-## Build the image
+## Pull the image 
 ```
-docker build . -t jpegoptim-dockerized
+docker pull froulet/docker-jpegoptim-alpine
+```
+
+Or build it from the Dockerfile :
+```
+docker build . -t froulet/docker-jpegoptim-alpine
 ```
 
 ## Use jpegoptim on one image
 You have to mount the folder containing the image into /app directory. Example :
 
 ```
-docker run --rm -it -v $(pwd):/app -w /app jpegoptim-dockerized images.jpg
+docker run --rm -it -v $(pwd):/app -w /app froulet/docker-jpegoptim-alpine images.jpg
 ```
 
 ## Use jpegoptim with an absolute path
 You have to mount the image file as a volume : 
 
 ```
-docker run --rm -it -v /absolute/path/to/image/file.jpg:/app/image -w /app jpegoptim-dockerized jpegoptim --strip-all --all-progressive --max=90 image
+docker run --rm -it -v /absolute/path/to/image/file.jpg:/app/image -w /app froulet/docker-jpegoptim-alpine jpegoptim --strip-all --all-progressive --max=90 image
 ```
 
 ## Get help
@@ -24,7 +29,7 @@ docker run --rm -it -v /absolute/path/to/image/file.jpg:/app/image -w /app jpego
 If you run the container without any option help will be show.
 
 ```
-docker run --rm -it jpegoptim-dockerized jpegoptim 
+docker run --rm -it froulet/docker-jpegoptim-alpine jpegoptim 
 ```
 
 
