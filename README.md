@@ -14,7 +14,7 @@ docker build . -t froulet/docker-jpegoptim-alpine
 You have to mount the folder containing the image into /app directory. Example :
 
 ```
-docker run --rm -it -v $(pwd):/app -w /app froulet/docker-jpegoptim-alpine images.jpg
+docker run --rm -it -v $(pwd):/app -w /app froulet/docker-jpegoptim-alpine jpegoptim images.jpg
 ```
 
 ## Use jpegoptim with an absolute path
